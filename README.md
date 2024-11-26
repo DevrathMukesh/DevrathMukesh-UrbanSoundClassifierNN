@@ -2,8 +2,15 @@
 
 This project uses a neural network model to classify urban sounds from the [UrbanSound8K dataset](https://urbansounddataset.weebly.com/download-urbansound8k.html). The dataset includes various urban audio samples, such as sirens, drills, and street music.
 
-## Table of Contents
+## Demo
 
+Try out the **UrbanSound Classifier** using the interactive Streamlit app! You can upload an audio file and get instant predictions about its classification.
+
+👉 [Launch the Streamlit App](https://devrathmukesh-urbansoundclassifiernn-bvzccdyxvazzrhfiepjrso.streamlit.app/)
+
+
+## Table of Contents
+- [Demo](#demo)
 - [Dataset](#dataset)
 - [Installation](#installation)
 - [Features Extraction](#features-extraction)
@@ -18,7 +25,7 @@ Download the dataset from [UrbanSound8K](https://zenodo.org/records/1203745/file
 
 Install the necessary dependencies:
 ```bash
-pip install librosa numpy scipy scikit-learn tensorflow
+pip install librosa numpy scipy scikit-learn tensorflow streamlit
 ```
 
 ## Features Extraction
