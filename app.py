@@ -5,8 +5,7 @@ import librosa
 from tensorflow.keras.models import load_model
 
 # Load the model
-model = load_model('audio_classification.keras')
-
+model_path = 'saved_models/audio_classification.keras'
 # Define class labels
 class_labels = [
     "Air Conditioner", "Car Horn", "Children Playing", "Dog Bark", "Drilling",
