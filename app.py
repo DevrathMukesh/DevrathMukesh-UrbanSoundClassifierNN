@@ -43,7 +43,7 @@ if uploaded_file is not None:
     if st.button("Predict"):
         try:
             features = preprocess_audio(uploaded_file)
-            prediction = model.predict(features)
+            prediction = model_path.predict(features)
             predicted_index = np.argmax(prediction, axis=1)[0]
             predicted_label = class_labels[predicted_index]
             confidence = np.max(prediction)
