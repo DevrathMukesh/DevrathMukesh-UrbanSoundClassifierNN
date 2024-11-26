@@ -6,6 +6,8 @@ from tensorflow.keras.models import load_model
 
 # Load the model
 model_path = 'saved_models/audio_classification.keras'
+model = load_model(model_path)
+
 # Define class labels
 class_labels = [
     "Air Conditioner", "Car Horn", "Children Playing", "Dog Bark", "Drilling",
@@ -43,7 +45,7 @@ if uploaded_file is not None:
     if st.button("Predict"):
         try:
             features = preprocess_audio(uploaded_file)
-            prediction = model_path.predict(features)
+            prediction = model.predict(features)  # Use the loaded model here
             predicted_index = np.argmax(prediction, axis=1)[0]
             predicted_label = class_labels[predicted_index]
             confidence = np.max(prediction)
